@@ -70,4 +70,10 @@ STRINGS
 - A series of characters (letters, punctuation, etc.) is called a string.
 - But how can an array store characters instead of numbers? by "Character Encoding"
 - So since we can express characters as 8-bit integers, we can express strings as arrays of 8-bit characters.
+
+
+POINTERS
+- all the items in an array need to be the same size
+- So if we want to store strings (which can be pretty large and not of the same size as array slots) in an array, we can use pointers for that
+- But the pointers in this array make it not cache-friendly, because the baby names are scattered randomly around RAM. So reading from the 0th index, then the 1st index, etc. doesn't get that extra speedup from the cache.
 '''
