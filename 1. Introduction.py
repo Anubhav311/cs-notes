@@ -115,4 +115,8 @@ WHAT LOGARITHMS ARE USED FOR
 
 LOGARITHM RULES
 check pdf for this
+
+
+WHERE USED IN ALGORITHMS
+- "How many times must we double 1 before we get to nn" is a question we often ask ourselves in computer science. Or, equivalently, "How many times must we divide nn in half in order to get back down to 1?"
 '''
