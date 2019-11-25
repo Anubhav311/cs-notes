@@ -76,4 +76,11 @@ POINTERS
 - all the items in an array need to be the same size
 - So if we want to store strings (which can be pretty large and not of the same size as array slots) in an array, we can use pointers for that
 - But the pointers in this array make it not cache-friendly, because the baby names are scattered randomly around RAM. So reading from the 0th index, then the 1st index, etc. doesn't get that extra speedup from the cache.
+
+
+DYNAMIC ARRAY
+- when we allocate an array in a low-level language like C or Java, we have to specify upfront how many indices we want our array to have.
+- So what can we do? Just make an array and program it to resize itself when it runs out of space! This is called a dynamic array, and it's built on top of a normal array.
+- Appending an item to an array is usually an O(1)O(1) time operation, but a single doubling append is an O(n)O(n) time operation since we have to copy all nn items from our array.
+- The advantage of dynamic arrays over arrays is that you don't have to specify the size ahead of time, but the disadvantage is that some appends can be expensive. 
 '''
