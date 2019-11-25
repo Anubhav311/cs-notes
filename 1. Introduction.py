@@ -100,3 +100,15 @@ HASH TABLES
 - In our hash table, the counts are the values and the words ("lies," etc.) are the keys (analogous to the indices in an array). The process we used to translate a key into an array index is called a hashing function.
 - For avoiding collisions, let's have each array slot hold a pointer to a linked list holding the counts for all the words that hash to that index. And that linked list will store word as well as the count.
 '''
+
+
+# LOGARITHMS
+'''
+LOGARITHM MEANS
+- "What power must we raise this base to, in order to get this answer?" (log10(100) -- 10 is base and 100 is answer)
+
+
+WHAT LOGARITHMS ARE USED FOR
+- The main thing we use logarithms for is solving for xx when xx is in an exponent.
+- Logarithms help us bring the x down.
+'''
