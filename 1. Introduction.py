@@ -64,4 +64,10 @@ ARRAYS
 - But the formula we used to get the address of the nnth item in our array only works if:
 * Each item in the array is the same size (takes up the same number of bytes).
 * The array is uninterrupted (contiguous) in memory. There can't be any gaps in the array...like to "skip over" a memory slot Spotify was already using.
+
+
+STRINGS
+- A series of characters (letters, punctuation, etc.) is called a string.
+- But how can an array store characters instead of numbers? by "Character Encoding"
+- So since we can express characters as 8-bit integers, we can express strings as arrays of 8-bit characters.
 '''
