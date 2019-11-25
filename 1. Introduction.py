@@ -83,4 +83,13 @@ DYNAMIC ARRAY
 - So what can we do? Just make an array and program it to resize itself when it runs out of space! This is called a dynamic array, and it's built on top of a normal array.
 - Appending an item to an array is usually an O(1)O(1) time operation, but a single doubling append is an O(n)O(n) time operation since we have to copy all nn items from our array.
 - The advantage of dynamic arrays over arrays is that you don't have to specify the size ahead of time, but the disadvantage is that some appends can be expensive. 
+
+
+LINKED LISTS
+- Remember how we used pointers to get around length issues with our array of baby names? What if we pushed that idea even further? What if each character in our string were a two-index array with:
+- We would call each of these two-item arrays a node and we'd call this series of nodes a linked list.
+- Linked lists have worst-case O(1)O(1)-time appends, which is better than the worst-case O(n)O(n) time of dynamic arrays.
+- So linked lists have faster prepends (O(1) time) than dynamic arrays (O(n) time).
+- So if linked lists are so great, why do we usually store strings in an array? Because arrays have O(1)-time lookups.
+- Not only that—walking down a linked list is not cache-friendly. Because the next node could be anywhere in memory, we don't get any benefit from the processor cache. This means lookups in a linked list are even slower.
 '''
