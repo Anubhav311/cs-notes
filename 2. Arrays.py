@@ -24,3 +24,22 @@ How to check if something is overlapping some other thing in terms of time:
 Ending of the first thing will happen after starting of the second thing.
 This pattern can be used in other areas where we need to merge overlapping things.
 '''
+
+
+
+# SOLUTION TO ARRAY 2
+def reverse(list_of_chars):
+
+    # Reverse the input list of chars in place
+    if len(list_of_chars) < 2:
+        return list_of_chars
+        
+    for i in range((len(list_of_chars)/2)):
+        list_of_chars[i], list_of_chars[len(list_of_chars)-(1+i)] = list_of_chars[len(list_of_chars)-(1+i)], list_of_chars[i]
+
+    return list_of_chars
+
+# PATTERN LEARNED
+'''
+
+'''
