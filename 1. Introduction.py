@@ -111,4 +111,8 @@ LOGARITHM MEANS
 WHAT LOGARITHMS ARE USED FOR
 - The main thing we use logarithms for is solving for xx when xx is in an exponent.
 - Logarithms help us bring the x down.
+
+
+LOGARITHM RULES
+check pdf for this
 '''
