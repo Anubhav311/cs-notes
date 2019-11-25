@@ -41,5 +41,5 @@ def reverse(list_of_chars):
 
 # PATTERN LEARNED
 '''
-
+How to track begining and end of a list in single iteration.
 '''
