@@ -92,4 +92,11 @@ LINKED LISTS
 - So linked lists have faster prepends (O(1) time) than dynamic arrays (O(n) time).
 - So if linked lists are so great, why do we usually store strings in an array? Because arrays have O(1)-time lookups.
 - Not only that—walking down a linked list is not cache-friendly. Because the next node could be anywhere in memory, we don't get any benefit from the processor cache. This means lookups in a linked list are even slower.
+
+
+HASH TABLES
+- So we can think of an array as a table with two columns (index and values)...except you don't really get to pick the values in one column (the indices)—they're always 0, 1, 2, 3, etc.
+- Modding (modulus operator) our sum by 30 ensures we get a whole number that's less than 30 (and at least 0).
+- In our hash table, the counts are the values and the words ("lies," etc.) are the keys (analogous to the indices in an array). The process we used to translate a key into an array index is called a hashing function.
+- For avoiding collisions, let's have each array slot hold a pointer to a linked list holding the counts for all the words that hash to that index. And that linked list will store word as well as the count.
 '''
