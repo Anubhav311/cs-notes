@@ -18,3 +18,9 @@ def merge_ranges(meetings):
     return merged_meetings
 
 
+# PATTERN LEARNED
+'''
+How to check if something is overlapping some other thing in terms of time: 
+Ending of the first thing will happen after starting of the second thing.
+This pattern can be used in other areas where we need to merge overlapping things.
+'''
