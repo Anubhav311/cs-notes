@@ -59,5 +59,9 @@ FIXED-WIDTH INTEGERS
 
 
 ARRAYS
-- address of nth item in array = address of array start + naddress of array start+n
+- address of nth item in array = address of array start + naddress of array start
+- address of nth item in array = address of array start + (n * size of each item in bytes)
+- But the formula we used to get the address of the nnth item in our array only works if:
+* Each item in the array is the same size (takes up the same number of bytes).
+* The array is uninterrupted (contiguous) in memory. There can't be any gaps in the array...like to "skip over" a memory slot Spotify was already using.
 '''
