@@ -19,3 +19,11 @@ def can_two_movies_fill_flight(movie_lengths, flight_length):
         movie_lengths_set.add(i)
 
     return False
+
+# PATTERN LEARNED
+'''
+Sometimes a problem can be solved with nested loops. And sometimes the inner loop can be replaced by a set (hash table).
+This will reduce the runtime from O(n^2) to O(n)
+
+In this case, we needed to compare one item with another. So comparison can be done with a set (hash table ) also.
+'''
