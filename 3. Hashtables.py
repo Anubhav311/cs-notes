@@ -58,4 +58,6 @@ def has_palindrome_permutation(the_string):
 '''
 Fundamental property of a palindrom is that half of it's characters are same as the other half.
 If you all permutations are allowed, then you just have to confirm the existence of the character.
+
+This problem can also be solved with "two pointers" technicque. You would have to move them once you find a similar character
 '''
