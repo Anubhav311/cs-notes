@@ -153,3 +153,13 @@ def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
 
     return mergedArray == served_orders
     # return mergedArray
+
+
+
+# PATTERN LEARNED
+'''
+This problem is similar to "merge sorted arrays" problem.
+It's done in O(n) time and O(n) space. But since we are just suppose to return a boolean, we can do it in O(n) time and O(1) space. We don't have to create mergeArray variable. Instead of merging arrays, we can just compare them with served_orders array (which is basically a merged array) and return a boolean.
+
+This is solution can also be done with recursion. But it will incur some extra cost in terms of memory.
+'''
