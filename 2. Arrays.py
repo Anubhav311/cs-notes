@@ -33,15 +33,18 @@ In this case, most fundamental unit is the tuple. So there's no need to breakdow
 def reverse(list_of_chars):
 
     # Reverse the input list of chars in place
+    length = len(list_of_chars)
+    
     if len(list_of_chars) < 2:
         return list_of_chars
         
     for i in range((len(list_of_chars)/2)):
-        list_of_chars[i], list_of_chars[len(list_of_chars)-(1+i)] = list_of_chars[len(list_of_chars)-(1+i)], list_of_chars[i]
+        list_of_chars[i], list_of_chars[length-(i+1)] = list_of_chars[length-(i+1)], list_of_chars[i]
 
     return list_of_chars
 
 # PATTERN LEARNED
 '''
 How to track begining and end of a list in single iteration.
+It is called a "two pointer" technique
 '''
