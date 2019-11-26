@@ -87,3 +87,8 @@ def reverse_words(message):
     return message
 
 
+# PATTERN LEARNED
+'''
+reversing words is a sub-problem of reversing string.
+solving a simpler problem can give you insight into solving more complex problem.
+'''
