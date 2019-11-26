@@ -59,5 +59,9 @@ def has_palindrome_permutation(the_string):
 Fundamental property of a palindrom is that half of it's characters are same as the other half.
 If you all permutations are allowed, then you just have to confirm the existence of the character.
 
-This problem can also be solved with "two pointers" technicque. You would have to move them once you find a similar character
+This problem can also be solved with "two pointers" technicque. You would have to move them once you find a similar character.
+
+We can also solve it by checking if all characters are present even number of times. (except one character if total characters number is odd.)
+
+Cleanest approach would be to check if it has more than one character appearing only once. If it has, it's not a palindrom.
 '''
