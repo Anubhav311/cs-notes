@@ -27,3 +27,28 @@ This will reduce the runtime from O(n^2) to O(n)
 
 In this case, we needed to compare one item with another. So comparison can be done with a set (hash table ) also.
 '''
+
+
+
+# HASHTABLE PROBLEM TWO
+def has_palindrome_permutation(the_string):
+
+    # Check if any permutation of the input is a palindrome
+    if len(the_string) <= 1:
+        return True
+    
+    the_string_set = set()
+    
+    counter = 0
+    
+    for char in the_string:
+
+        if char in the_string_set:
+            counter += 1
+        
+        the_string_set.add(char)
+    
+    if counter == int(len(the_string)/2):
+        return True
+    
+    return False
