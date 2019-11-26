@@ -52,3 +52,10 @@ def has_palindrome_permutation(the_string):
         return True
     
     return False
+
+
+# PATTERN LEARNED
+'''
+Fundamental property of a palindrom is that half of it's characters are same as the other half.
+If you all permutations are allowed, then you just have to confirm the existence of the character.
+'''
