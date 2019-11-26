@@ -130,3 +130,26 @@ if you need to use a variable for increment the index of array. And it is starti
 
 while merging to arrays into one, size of the merged array is going to be equal to sum of the sizes of both input arrays.
 '''
+
+
+
+# CAFE ORDER CHECKER
+def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
+
+    # Check if we're serving orders first-come, first-served
+    mergedArray = [0] * (len(take_out_orders) + len(dine_in_orders))
+
+    for i in range(len(mergedArray)):
+        # print(indexA, indexB, i)
+        if len(take_out_orders) == 0:
+            mergedArray[i] = dine_in_orders.pop(0)
+        elif len(dine_in_orders) == 0:
+            mergedArray[i] = take_out_orders.pop(0)
+        else:
+            if take_out_orders[0] <= dine_in_orders[0]:
+                mergedArray[i] = take_out_orders.pop(0)
+            else:
+                mergedArray[i] = dine_in_orders.pop(0)
+
+    return mergedArray == served_orders
+    # return mergedArray
