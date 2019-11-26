@@ -125,4 +125,8 @@ def merge_lists(my_list, alices_list):
 '''
 different length of arrays or empty arrays are the problem when it comes to merging sorted arrays.
 So if you remove the impact of empty or shorter arrays, the problem will become easier.
+
+if you need to use a variable for increment the index of array. And it is starting from zero. You can also consider just removing the items from zero index instead of incrementing the counter.
+
+while merging to arrays into one, size of the merged array is going to be equal to sum of the sizes of both input arrays.
 '''
