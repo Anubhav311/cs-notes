@@ -121,4 +121,8 @@ def merge_lists(my_list, alices_list):
     return mergedArray
 
 
+# PATTERN LEARNED
+'''
+different length of arrays or empty arrays are the problem when it comes to merging sorted arrays.
+So if you remove the impact of empty or shorter arrays, the problem will become easier.
 '''
