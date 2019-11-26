@@ -158,4 +158,6 @@ class WordCloudData:
 '''
 Dictionaries are really good when it comes to keeping count of something.
 Managing uppercase and lowercase words/letters is a complex problem. Spend more time on it and figure out a generic solution for future.
+
+Dictionaries become very useful because of their unique keys property. It makes the lookup constant time.
 '''
