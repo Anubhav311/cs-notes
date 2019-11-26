@@ -48,3 +48,42 @@ def reverse(list_of_chars):
 How to track begining and end of a list in single iteration.
 It is called a "two pointer" technique
 '''
+
+
+
+# REVERSE WORDS
+def reverse_words(message):
+    # Reverse the input list of chars in place
+    length = len(message)
+    emptySpace = []
+    length = len(message)
+    
+    if length < 1:
+        return message
+        
+    # reversing the whole string 
+    for i in range(int(length/2)):
+        message[i], message[length-(i+1)] = message[length-(i+1)], message[i]
+        if message[i] == ' ':
+            emptySpace.append(i)
+        if message[length-(i+1)] == ' ':
+            emptySpace.append(length-(i+1))
+        
+    sortedEmptySpaces = sorted(emptySpace)
+    sortedEmptySpaces.append(len(message))
+    
+    #reversing the words in place
+    wordStart = 0
+    for i in sortedEmptySpaces:
+        wordEnd = i-1
+        
+        while wordStart < wordEnd:
+            message[wordStart], message[wordEnd] = message[wordEnd], message[wordStart]
+            wordStart += 1
+            wordEnd -= 1
+            
+        wordStart = i+1
+
+    return message
+
+
