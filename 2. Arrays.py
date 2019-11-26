@@ -92,3 +92,33 @@ def reverse_words(message):
 reversing words is a sub-problem of reversing string.
 solving a simpler problem can give you insight into solving more complex problem.
 '''
+
+
+
+# MERGE SORTED ARRAYS
+def merge_lists(my_list, alices_list):
+
+    # Combine the sorted lists into one large sorted list
+    # edge cases
+    # 1. arrays with different lengths
+    # 2. some of the numbers can be present in both of the arrays
+    # 3. can one or both arrays be empty
+
+    mergedArray = [0] * (len(my_list) + len(alices_list))
+
+    for i in range(len(mergedArray)):
+        # print(indexA, indexB, i)
+        if len(my_list) == 0:
+            mergedArray[i] = alices_list.pop(0)
+        elif len(alices_list) == 0:
+            mergedArray[i] = my_list.pop(0)
+        else:
+            if my_list[0] <= alices_list[0]:
+                mergedArray[i] = my_list.pop(0)
+            else:
+                mergedArray[i] = alices_list.pop(0)
+        
+    return mergedArray
+
+
+'''
