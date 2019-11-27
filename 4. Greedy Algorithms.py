@@ -126,3 +126,10 @@ def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
     # All orders in served_orders have been "accounted for"
     # so we're serving first-come, first-served!
     return True
+
+# PATTERN LEARNED
+'''
+In this algo we are actually not keeping track of anything. We are just incrementing index values and checking if statements.
+
+The thing we need to keep track of is a boolean. We just have to return True or False based on if condition is met or not.
+'''
