@@ -94,6 +94,10 @@ this way you can track a lot of things, and all will be based on the fundamental
 
 
 # GREEDY ALGO 3
+
+
+
+# GREEDY ALGO 4
 def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
     take_out_orders_index = 0
     dine_in_orders_index = 0
@@ -133,3 +137,19 @@ In this algo we are actually not keeping track of anything. We are just incremen
 
 The thing we need to keep track of is a boolean. We just have to return True or False based on if condition is met or not.
 '''
+
+
+
+# GREEDY ALGO 5
+def shuffle(the_list):
+
+    # Shuffle the input in place
+    if len(the_list) <= 1:
+        return the_list
+        
+    for index in range(len(the_list)):
+        random_index = get_random(index, len(the_list)-1)
+        
+        the_list[random_index], the_list[index] = the_list[index], the_list[random_index]
+
+
