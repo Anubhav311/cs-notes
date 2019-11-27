@@ -122,14 +122,18 @@ def get_products_of_all_ints_except_at_index(int_list):
         product_array[i] *= prev_product
         prev_product *= int_list[i]
     
-        end_index = len(int_list)- (i+1)
+        end_index = len(int_list) - (i+1)
         product_array[end_index] *= next_product
         next_product *= int_list[end_index]
 
     return product_array
 
 # PATTERN LEARNED
+'''
+For this problem, coming up with a greeday algo was difficult. But we could reach to a greedy algo by starting with a brute force solution, looking for repeat work in that solution, and modifying it to do that work once only
 
+Notice that in this solution we are saving our product, like we do in memoization. But this is not memoization.
+'''
 
 # GREEDY ALGO 4
 def is_first_come_first_served(take_out_orders, dine_in_orders, served_orders):
