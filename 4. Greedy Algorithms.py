@@ -51,7 +51,7 @@ def highest_product_of_3(list_of_ints):
     highest_product_of_3 = list_of_ints[0] * list_of_ints[1] * list_of_ints[2]
 
     # Walk through items, starting at index 2
-    for i in xrange(2, len(list_of_ints)):
+    for i in range(2, len(list_of_ints)):
         current = list_of_ints[i]
 
         # Do we have a new highest product of 3?
