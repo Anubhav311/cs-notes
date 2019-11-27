@@ -141,6 +141,9 @@ The thing we need to keep track of is a boolean. We just have to return True or 
 
 
 # GREEDY ALGO 5
+def get_random(floor, ceiling):
+    return random.randrange(floor, ceiling + 1)
+
 def shuffle(the_list):
 
     # Shuffle the input in place
@@ -152,4 +155,8 @@ def shuffle(the_list):
         
         the_list[random_index], the_list[index] = the_list[index], the_list[random_index]
 
+    # shuffled_list = []
+    # for index in range(len(the_list)):
+    #     random_index = get_random(0, len(the_list)-1)
+    #     shuffled_list.append(the_list.pop(random_index))
 
