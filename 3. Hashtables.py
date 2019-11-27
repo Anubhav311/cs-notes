@@ -188,3 +188,10 @@ def sort_scores(unsorted_scores, highest_possible_score):
                 final_score_list.append(index)
 
     return final_score_list
+
+
+# PATTERN LEARNED
+'''
+Counting and greedy algorithms are common well known ways of getting O(n) runtime.
+Indexes are used as addresses mostly but they can also be used as values. The benefit of using them as values is that they are always going to be sorted.
+'''
