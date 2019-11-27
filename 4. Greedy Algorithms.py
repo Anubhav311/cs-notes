@@ -80,3 +80,13 @@ def highest_product_of_3(list_of_ints):
 
     return highest_product_of_3
 
+# PATTERN LEARNED
+'''
+You don't have to keep track of everything in greedy algorithms as one thing is being tracked by for loop already.
+
+track most fundamental thing
+track thing that is an abstraction of the fundamental thing.
+track another thing that is an abstraction of the previous abstraction.
+this way you can track a lot of things, and all will be based on the fundamental thing.
+
+'''
