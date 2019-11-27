@@ -161,3 +161,30 @@ Managing uppercase and lowercase words/letters is a complex problem. Spend more 
 
 Dictionaries become very useful because of their unique keys property. It makes the lookup constant time.
 '''
+
+
+
+# HASHTABLE PROBLEM FOUR
+def sort_scores(unsorted_scores, highest_possible_score):
+
+    # Sort the scores in O(n) time
+    # 1. more than one player can have same score
+    # 2. can there by empty arrays. Means no scores at all.
+    # 3. can there be negative scores? Like a penalty for bad play.
+    
+    score_counts = [None] * highest_possible_score
+    
+    for score in unsorted_scores:
+        if score_counts[score] != None:
+            score_counts[score] += 1
+        else:
+            score_counts[score] =1
+    
+    final_score_list = []
+    
+    for index in reversed(range(len(score_counts))):
+        if score_counts[index] != None:
+            for count in range(score_counts[index]):
+                final_score_list.append(index)
+
+    return final_score_list
