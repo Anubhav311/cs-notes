@@ -1,4 +1,4 @@
-# Binary search
+# Adapted binary search
 def find_rotation_point(words):
     first_word = words[0]
     floor_index = 0
@@ -21,3 +21,8 @@ def find_rotation_point(words):
             # Between floor and ceiling is where we flipped to the beginning
             # so ceiling is alphabetically first
             return ceiling_index
+
+# PATTERN LEARNED
+'''
+Binary search doesn't only work on sorted lists. It can also work with partially sorted lists.
+'''
