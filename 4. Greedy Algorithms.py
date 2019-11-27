@@ -160,3 +160,13 @@ def shuffle(the_list):
     #     random_index = get_random(0, len(the_list)-1)
     #     shuffled_list.append(the_list.pop(random_index))
 
+
+# PATTERN LEARNED
+'''
+It helps to start by ignoring the in-place requirement, then adapt the approach to work in place.
+
+While shuffling a list, there are two things that can be random.
+1. the new order of the items (pick items "serially" from original list and put them in new list "randomly")
+2. the picking order of items (pick items "randomly" from original list and put them in new list "serially")
+second one will give all the items equal chance of landing at any place in new list.
+'''
