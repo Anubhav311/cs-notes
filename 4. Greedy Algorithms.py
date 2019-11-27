@@ -100,20 +100,35 @@ def get_products_of_all_ints_except_at_index(int_list):
     if len(int_list) < 2:
         raise IndexError('no enough ints')
     
-    product_array = [None] * len(int_list)
+    product_array = [1] * len(int_list)
 
-    product = 1
+    # THIS SOLUTION IS O(2N)
+    # product = 1
+    # for i in range(len(int_list)):
+    #     product_array[i] = product
+    #     product *= int_list[i]
+
+    # product = 1
+    # for i in range(len(int_list)-1, -1, -1):
+    #     product_array[i] *= product
+    #     product *= int_list[i]
+
+
+    # THIS SOLUTION IS O(N)
+    prev_product = 1
+    next_product = 1
 
     for i in range(len(int_list)):
-        product_array[i] = product
-        product *= int_list[i]
+        product_array[i] *= prev_product
+        prev_product *= int_list[i]
+    
+        end_index = len(int_list)- (i+1)
+        product_array[end_index] *= next_product
+        next_product *= int_list[end_index]
 
-    product = 1
-    for i in range(len(int_list)-1, -1, -1):
-        product_array[i] *= product
-        product *= int_list[i]
-        
     return product_array
+
+# PATTERN LEARNED
 
 
 # GREEDY ALGO 4
