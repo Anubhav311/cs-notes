@@ -94,7 +94,26 @@ this way you can track a lot of things, and all will be based on the fundamental
 
 
 # GREEDY ALGO 3
+def get_products_of_all_ints_except_at_index(int_list):
 
+    # Make a list with the products
+    if len(int_list) < 2:
+        raise IndexError('no enough ints')
+    
+    product_array = [None] * len(int_list)
+
+    product = 1
+
+    for i in range(len(int_list)):
+        product_array[i] = product
+        product *= int_list[i]
+
+    product = 1
+    for i in range(len(int_list)-1, -1, -1):
+        product_array[i] *= product
+        product *= int_list[i]
+        
+    return product_array
 
 
 # GREEDY ALGO 4
