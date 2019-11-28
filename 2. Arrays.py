@@ -25,6 +25,8 @@ Ending of the first thing will happen after starting of the second thing.
 This pattern can be used in other areas where we need to merge overlapping things.
 
 In this case, most fundamental unit is the tuple. So there's no need to breakdown the problem to individual values in the tuples. You only need to break them down to tuple level (not below that). Tuples fundamental because they will give you predictive abilities with respect to the problem. So the lesson is that we shouldn't always try to breakdown the problem to all the way down. Stop at the fundamental level. Don't go below that.
+
+This problem is using greedy approach and sorting. So it's a lesson that these two algos can work together.
 '''
 
 
