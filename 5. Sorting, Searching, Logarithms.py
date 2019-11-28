@@ -57,28 +57,54 @@ def find_repeat(numbers):
     #     if numbers[i] == numbers[i+1]:
     #         return numbers[i]
 
-    #O(n log n) time and O(1) space. Without modifying the input.
-    floor = 1
-    ceiling = len(numbers) - 1
+    # #O(n log n) time and O(1) space. Without modifying the input.
+    # floor = 1
+    # ceiling = len(numbers) - 1
 
-    while floor < ceiling:
-        midpoint = floor + ((ceiling - floor) / 2)
-        lower_range_floor, lower_range_ceiling = floor, midpoint
-        upper_range_floor, upper_range_ceiling = midpoint+1, ceiling
+    # while floor < ceiling:
+    #     midpoint = floor + ((ceiling - floor) / 2)
+    #     lower_range_floor, lower_range_ceiling = floor, midpoint
+    #     upper_range_floor, upper_range_ceiling = midpoint+1, ceiling
 
-        items_in_lower_range = 0
-        for item in numbers:
-            if item >= lower_range_floor and item <= lower_range_ceiling:
-                items_in_lower_range += 1
+    #     items_in_lower_range = 0
+    #     for item in numbers:
+    #         if item >= lower_range_floor and item <= lower_range_ceiling:
+    #             items_in_lower_range += 1
 
-        distinct_possible_integers_in_lower_range = (
-            lower_range_ceiling
-            - lower_range_floor
-            + 1
-        )
-        if items_in_lower_range > distinct_possible_integers_in_lower_range:
-            floor, ceiling = lower_range_floor, lower_range_ceiling
-        else:
-            floor, ceiling = upper_range_floor, upper_range_ceiling
+    #     distinct_possible_integers_in_lower_range = (
+    #         lower_range_ceiling
+    #         - lower_range_floor
+    #         + 1
+    #     )
+    #     if items_in_lower_range > distinct_possible_integers_in_lower_range:
+    #         floor, ceiling = lower_range_floor, lower_range_ceiling
+    #     else:
+    #         floor, ceiling = upper_range_floor, upper_range_ceiling
 
-    return floor
+    # return floor
+
+    # O(3n) time and O(1) space. Without modifying the input.
+    n = len(numbers) - 1
+
+    position_in_cycle = n + 1
+    for _ in range(n):
+        position_in_cycle = numbers[position_in_cycle - 1]
+
+    remembered_position_in_cycle = position_in_cycle
+    current_position_in_cycle = numbers[position_in_cycle - 1]
+    cycle_step_count = 1
+
+    while current_position_in_cycle != remembered_position_in_cycle:
+        current_position_in_cycle = numbers[current_position_in_cycle - 1]
+        cycle_step_count += 1
+
+    pointer_start = n + 1
+    pointer_ahead = n + 1
+    for _ in range(cycle_step_count):
+        pointer_ahead = numbers[pointer_ahead - 1]
+
+    while pointer_start != pointer_ahead:
+        pointer_start = numbers[pointer_start - 1]
+        pointer_ahead = numbers[pointer_ahead - 1]
+
+    return pointer_start
