@@ -142,3 +142,11 @@ def sort_scores(unsorted_scores, highest_possible_score):
             sorted_scores.append(score)
 
     return sorted_scores
+
+# PATTERN LEARNED
+'''
+In this problem, we are using greedy algo and counting algo for searching something.
+That means we greedy/counting algo can also work like a searching algorithm.
+
+Think about other algorithms that can work together to solve a problem.
+'''
