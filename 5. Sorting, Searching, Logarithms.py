@@ -108,3 +108,12 @@ def find_repeat(numbers):
         pointer_ahead = numbers[pointer_ahead - 1]
 
     return pointer_start
+
+# PATTERN LEARNED
+'''
+We solved this problem by thinking about a target runtime, and then started optimizing our solution for that runtime.
+
+Starting with a target runtime and working backward from there can be a powerful strategy for all kinds of coding interview questions.
+
+This problem also shows how important hints can be. A simple hint can give you an insight for improving the solution. So when you get a hint, drop everything and listen carefully.
+'''
