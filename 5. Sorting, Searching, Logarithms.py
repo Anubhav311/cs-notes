@@ -34,14 +34,19 @@ def find_repeat(numbers):
 
     # Find a number that appears more than once
 
-    # O(n) time and O(n) space
-    integers_set = set()
+    # # O(n) time and O(n) space
+    # integers_set = set()
     
-    for num in numbers:
-        if num in integers_set:
-            return num
-        else:
-            integers_set.add(num)
+    # for num in numbers:
+    #     if num in integers_set:
+    #         return num
+    #     else:
+    #         integers_set.add(num)
     
-    return Exception('no duplicates')
+    # return Exception('no duplicates')
 
+    # O(n^2) time and O(1) space
+    for i in range(len(numbers)):
+        for j in range(i+1, len(numbers)):
+            if numbers[i] == numbers[j]:
+                return numbers[i]
