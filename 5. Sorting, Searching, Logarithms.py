@@ -45,8 +45,14 @@ def find_repeat(numbers):
     
     # return Exception('no duplicates')
 
-    # O(n^2) time and O(1) space
+    # # O(n^2) time and O(1) space
+    # for i in range(len(numbers)):
+    #     for j in range(i+1, len(numbers)):
+    #         if numbers[i] == numbers[j]:
+    #             return numbers[i]
+
+    # O(n log n) time and O(1) space. But here we are modifying the input.
+    numbers.sort()
     for i in range(len(numbers)):
-        for j in range(i+1, len(numbers)):
-            if numbers[i] == numbers[j]:
-                return numbers[i]
+        if numbers[i] == numbers[i+1]:
+            return numbers[i]
