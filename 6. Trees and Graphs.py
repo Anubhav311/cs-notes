@@ -58,6 +58,7 @@ BST Weaknesses:
 
 
 # VALID BINARY SEARCH TREE
+# O(n) time and O(n) space.
 def is_binary_search_tree(root):
 
     # Determine if the tree is a valid binary search tree
@@ -75,3 +76,16 @@ def is_binary_search_tree(root):
             node_and_bounds_stack.append((node.right, node.value, upper_bound))
 
     return True
+
+# # RECURSIVE SOLUTION
+# def is_binary_search_tree(root, lower_bound=-float('inf'), upper_bound=float('inf')):
+#     if not root:
+#         return True
+
+#     if (root.value >= upper_bound or root.value <= lower_bound):
+#         return False
+
+#     return (is_binary_search_tree(root.left, lower_bound, root.value)
+#             and is_binary_search_tree(root.right, root.value, upper_bound))
+
+
