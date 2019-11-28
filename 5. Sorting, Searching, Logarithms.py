@@ -171,7 +171,6 @@ def merge_ranges(meetings):
             
     return merged_meetings
 
-
 # PATTERN LEARNED
 '''
 How to check if something is overlapping some other thing in terms of time: 
@@ -182,3 +181,6 @@ In this case, most fundamental unit is the tuple. So there's no need to breakdow
 
 This problem is using greedy approach and sorting. So it's a lesson that these two algos can work together.
 '''
+
+
+
