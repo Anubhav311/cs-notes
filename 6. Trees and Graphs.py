@@ -126,3 +126,9 @@ def find_second_largest(root_node):
 
         current = current.right
 
+# PATTERN LEARNED
+'''
+It's very important to understand the properties of the data structure you are using.
+
+Here we used a "simplify, solve, and adapt" strategy.
+'''
