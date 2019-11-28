@@ -89,3 +89,8 @@ def is_binary_search_tree(root):
 #             and is_binary_search_tree(root.right, root.value, upper_bound))
 
 
+# PATTERN LEARNED
+'''
+We are following a greedy approach with this one.
+We are also using divide and conquer approach. Solving right and left.
+'''
