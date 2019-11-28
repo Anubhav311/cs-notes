@@ -117,3 +117,28 @@ Starting with a target runtime and working backward from there can be a powerful
 
 This problem also shows how important hints can be. A simple hint can give you an insight for improving the solution. So when you get a hint, drop everything and listen carefully.
 '''
+
+
+
+# COUNTING SEARCH
+def sort_scores(unsorted_scores, highest_possible_score):
+    # List of 0s at indices 0..highest_possible_score
+    score_counts = [0] * (highest_possible_score+1)
+
+    # Populate score_counts
+    for score in unsorted_scores:
+        score_counts[score] += 1
+
+    # Populate the final sorted list
+    sorted_scores = []
+
+    # For each item in score_counts
+    for score in range(len(score_counts) - 1, -1, -1):
+        count = score_counts[score]
+
+        # For the number of times the item occurs
+        while range(count):
+            # Add it to the sorted list
+            sorted_scores.append(score)
+
+    return sorted_scores
