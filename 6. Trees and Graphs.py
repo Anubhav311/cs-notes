@@ -55,3 +55,23 @@ BST Weaknesses:
 * Poor performance if unbalanced. Some types of binary search trees balance automatically, but not all. If a BST is not balanced, then operations become O(n)O(n).
 * No O(1)O(1) operations. BSTs aren't the fastest for anything. On average, a list or a dictionary will be faster.
 '''
+
+
+# VALID BINARY SEARCH TREE
+def is_binary_search_tree(root):
+
+    # Determine if the tree is a valid binary search tree
+    node_and_bounds_stack = [(root, -float('inf'), float('inf'))]
+
+    while len(node_and_bounds_stack):
+        node, lower_bound, upper_bound = node_and_bounds_stack.pop()
+
+        if (node.value <= lower_bound) or (node.value >= upper_bound):
+            return False
+
+        if node.left:
+            node_and_bounds_stack.append((node.left, lower_bound, node.value))
+        if node.right:
+            node_and_bounds_stack.append((node.right, node.value, upper_bound))
+
+    return True
