@@ -184,7 +184,7 @@ def sort_scores(unsorted_scores, highest_possible_score):
     
     for index in reversed(range(len(score_counts))):
         if score_counts[index] != None:
-            for count in range(score_counts[index]):
+            while range(score_counts[index]):
                 final_score_list.append(index)
 
     return final_score_list

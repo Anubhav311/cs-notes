@@ -1,3 +1,5 @@
+import random 
+
 # GREEDY ALGO 1
 def get_max_profit(stock_prices):
     # Calculate the max profit
