@@ -26,3 +26,22 @@ def find_rotation_point(words):
 '''
 Binary search doesn't only work on sorted lists. It can also work with partially sorted lists.
 '''
+
+
+
+# BINARY SEARCH, PIGEONHOLE PROBLEM
+def find_repeat(numbers):
+
+    # Find a number that appears more than once
+
+    # O(n) time and O(n) space
+    integers_set = set()
+    
+    for num in numbers:
+        if num in integers_set:
+            return num
+        else:
+            integers_set.add(num)
+    
+    return Exception('no duplicates')
+
