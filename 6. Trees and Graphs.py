@@ -206,3 +206,12 @@ D. We started with a graph with N+1 nodes and maximum degree D, and we just rebu
 
 In the worst case, the node we add back in will have D neighbors, and they'll all have different colors. Not a problem. We have D+1 colors to choose from, so at least one color is still free. We'll use that one for this node. Bam.
 '''
+
+# PATTERN LEARNED
+'''
+Graph algos can be very complex and slow.
+
+We used a greedy ↴ approach to build up a correct solution in one pass through the nodes.
+
+Thinking about the desired runtime and then optimizing your solution for that really works. Practice it.
+'''
