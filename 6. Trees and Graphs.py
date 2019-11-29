@@ -132,3 +132,56 @@ It's very important to understand the properties of the data structure you are u
 
 Here we used a "simplify, solve, and adapt" strategy.
 '''
+
+
+
+# GRAPH COLORING
+# proof by induction that D + 1 is always enough for legal coloring
+'''
+In general, an inductive proof uses 2 steps to prove a claim is true for all (usually positive) integers:
+
+1. A base case showing the claim is true for the first number (1 or 0)
+2. An inductive step showing that if we assume the claim is true for a number nn, then the claim is also true for n+1n+1
+
+If the claim is true for the first number, and for any next number, then it must be true for all numbers.
+
+So let's prove this claim:
+
+A legal coloring with D+1 colors is always possible for a graph of N nodes with maximum degree D.
+
+For our base case, we need to show this claim holds for a graph with 1 node.
+
+A graph with 1 node has 0 edges, so the maximum degree DD is 0. That means we have 1 color (D+1=1D+1=1).
+
+Can we color that node with the one available color? Definitely, since it doesn't have any adjacent nodes that could make the coloring illegal.
+
+""What about if the graph has a loop! ↴ We're assuming our graph doesn't have these because otherwise, there's no possible legal coloring. Keep this edge case in mind though: we'll need to check for loops in our input graph and throw an error if we find any.""
+
+So we've proven our base case. Now for the inductive step.
+
+This'll be our assumption:
+
+A D+1 coloring is possible for a graph with N nodes.
+
+Can we show that if our assumption is true, it must also be true for a graph with N+1N+1 nodes?
+
+Let's say we have a graph with N+1 nodes and maximum degree D. We're not sure yet if we can color it with D+1 colors, right?
+
+Ok, so let's remove a node and its edges from the graph. Any node. Now we have a graph with N nodes.
+
+What happened to D by removing a node?
+
+D either stayed the same or went down. We removed edges, so there's no way D went up.
+
+So now we have a graph with N nodes and maximum degree at most D. Can we color this graph with D+1 colors?
+
+Yup! That's exactly our assumption! As part of the inductive step, we've assumed that we can color this graph with D+1 colors. So let's go ahead and color the graph.
+
+Now all we have to do is add back in the node we removed (so we have N+1 nodes again) and show we can find a valid color for that node.
+
+When we add the node we removed back in, what's the most neighbors it can have?
+
+D. We started with a graph with N+1 nodes and maximum degree D, and we just rebuilt that graph.
+
+In the worst case, the node we add back in will have D neighbors, and they'll all have different colors. Not a problem. We have D+1 colors to choose from, so at least one color is still free. We'll use that one for this node. Bam.
+'''
