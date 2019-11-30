@@ -30,19 +30,35 @@ def get_permutations(string):
 
 #     return fib(n-1) + fib(n-2)
 
-# O(2n) runtime O(2n) space
-cach = {}
+# # O(2n) runtime O(2n) space
+# cach = {}
+# def fib(n):
+#     # Compute the nth Fibonacci number
+#     if n is 0 or n is 1:
+#         return n
+
+#     if n in cach:
+#         return cach[n]
+
+#     fibNum = fib(n-1) + fib(n-2)
+
+#     cach[n] = fibNum        
+
+#     return fibNum
+
+# O(n) runtime and O(1) space
 def fib(n):
     # Compute the nth Fibonacci number
     if n is 0 or n is 1:
         return n
 
-    if n in cach:
-        return cach[n]
-
-    fibNum = fib(n-1) + fib(n-2)
-
-    cach[n] = fibNum        
-
-    return fibNum
+    prev_prev = 0
+    prev = 1
+    
+    for i in range(n-1):
+        current = prev + prev_prev
+        prev_prev = prev
+        prev = current
+        
+    return current
 
