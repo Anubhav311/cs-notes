@@ -62,3 +62,7 @@ def fib(n):
         
     return current
 
+# PATTERN LEARNED
+'''
+Iterative solutions can be more efficient than recursive solution in terms of memory.
+'''
