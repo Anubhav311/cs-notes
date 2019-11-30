@@ -20,3 +20,13 @@ def get_permutations(string):
             permutations.add(permutation)
 
     return permutations
+
+
+# MEMOIZATION
+# O(2^n) runtime O(2^n) space
+def fib(n):
+    if n is 0 or n is 1:
+        return n
+
+    return fib(n-1) + fib(n-2)
+
