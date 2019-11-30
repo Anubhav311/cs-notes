@@ -23,10 +23,26 @@ def get_permutations(string):
 
 
 # MEMOIZATION
-# O(2^n) runtime O(2^n) space
+# # O(2^n) runtime O(2^n) space
+# def fib(n):
+#     if n is 0 or n is 1:
+#         return n
+
+#     return fib(n-1) + fib(n-2)
+
+# O(2n) runtime O(2n) space
+cach = {}
 def fib(n):
+    # Compute the nth Fibonacci number
     if n is 0 or n is 1:
         return n
 
-    return fib(n-1) + fib(n-2)
+    if n in cach:
+        return cach[n]
+
+    fibNum = fib(n-1) + fib(n-2)
+
+    cach[n] = fibNum        
+
+    return fibNum
 
